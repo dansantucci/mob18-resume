@@ -1,7 +1,20 @@
+* { box-sizing: border-box }
 body {
-    background-color: azure;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url(../images/ricepaper.jpg) fixed repeat;
 }
+
+/* Auxiliar */
+.clearfix:after { 
+    content: "."; 
+    visibility: hidden; 
+    display: block; 
+    height: 0; 
+    clear: both;
+ }
+.hide { display: none }
+
+ /* Header */
 .header {
     background-color: #FFF;
     min-height: 50px;
@@ -18,8 +31,10 @@ body {
     margin-top: 10px;
 }
 
-.nav { 
-    float: right;
+@media screen and (min-width: 480px) {
+    .nav { 
+        float: right;
+    }
 }
 .nav a {
     text-decoration: none;
@@ -35,42 +50,259 @@ body {
     border-color: cornflowerblue;
 }
 
-.main {
-    background-color: blueviolet;
+
+/* About */
+.about {
+    padding: 20px 10px;
 }
 
-.footer {
-    padding: 20px;
+.about-image-container {
+    float: left;
+    width: 50%;
     text-align: center;
 }
 
-.footer p {
-    margin-top: 25px;
+.about-image {
+    border: 2px solid #333;
+    border-radius: 110px;
+    width: 200px;
+    height: 200px;
+}
+.about-info {
+    float: left;
+    width: 50%;
+    padding: 30px 0;
+}
+    .about-info h1 {
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .about-info h2 {
+        font-size: 20px;
+        font-variant: all-petite-caps;
+        margin: 20px 0 15px;
+    }
+    .about-info p {
+        padding: 10px 0;
+        font-size: 14px;
+        word-break: break-word;
+        white-space: normal;
+    }
+
+/* Personal Info */
+.personalinfo {
+    padding: 20px 30px;
+}
+.personalinfo-tab {
+    display: inline-block;
+    min-width: 100px;
+    text-align: center;
+    padding: 10px 15px;
+    margin: 0 20px;
+    background-color: #E5E5E5;
+    color: #333;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: none;
+    position: relative;
+}
+.personalinfo-tab.active {
+    background-color: #333;
+    color: #e3e3e3;
+}
+.personalinfo-tab.active:after {
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top: 10px solid #333;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0px;
 }
 
+.personalinfo-block {
+    padding: 20px 25px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 14px;
+}
+    .personalinfo-block p {
+        line-height: 20px;
+        font-size: 16px;
+    }
+    .personalinfo-block p + p {
+        margin-top: 15px;
+    }
+    .personalinfo-block li + li {
+        margin-top: 20px;
+    }
+    .personalinfo-block strong {
+        font-size: 14px;
+        display: block;
+        font-weight: bold;
+    }
+    .personalinfo-block i {
+        display: block;
+        font-style: italic;
+        margin: 5px 0;
+    }
+
+/* Skills  */
+.skills {
+    padding: 20px 30px;    
+}
+    .skills h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid #333;
+        padding-bottom: 2px;
+    }
+    .skills p,
+    .skills div {
+        width: 50%;
+        float: left;
+    }
+    .skills p {
+        line-height: 22px;
+    }
+    .skills div {
+        padding-left: 30px;
+    }
+    
+    .skills label {
+        display: block;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .skills meter {
+        width: 100%;
+        height: 20px;
+    }
+
+
+/* Contact  */
+.contact {    
+    padding: 20px 30px 40px;
+}
+    .contact h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid #333;
+        padding-bottom: 2px;
+    }    
+    .contact div {
+        width: 50%;
+        float: left;
+    }
+    .contact div + div {
+        padding-left: 30px;
+    }
+    .contact label { 
+        font-size: 14px;
+        display: block; 
+        margin-bottom: 5px;
+    }
+    .contact input,
+    .contact textarea {   
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contact input {
+        line-height: 40px;
+
+    }
+
+    .contact button {
+        background-color: #008CBA;
+        border: 2px solid #008CBA;
+        border-radius: 2px;
+        color: #e5e5e5;
+        border: none;        
+        padding: 15px 32px;
+        text-align: center;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        margin: 16px 0 !important;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+      
+    .contact button:hover {
+        background-color: #e5e5e5;
+        color: #008CBA;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(40, 40, 40, .15);
+}
+    .footer p {
+        margin-top: 25px;
+    }
 
 .footer-icon {
-    background: url('../images/social.png') no-repeat;
-	width: 30px;
-    height: 30px;
+	width: 32px;
+    height: 32px;
     display: inline-block;
     text-indent: -9999px;
-    filter: grayscale(1);
     background-size: 130px;
     margin: 0 10px;
     transition: filter 350ms linear;
 }
+    .footer-icon:hover{
+        filter: unset;
+    }
 
-.footer-icon.facebook {
-    background-position: -6px -5px;
-}
-.footer-icon.twitter {
-    background-position: -50px -5px;
-}
-.footer-icon.linkedin {
-    background-position: -50px -46px;
-}
+    .footer-icon--github {
+        background: url('../images/github-icon.png') no-repeat;
+    }
+    .footer-icon--linkedin {
+        background: url('../images/social.png') no-repeat;
+        background-position: -56px -52px;
+        background-size: 143px;
+    }
 
-.footer-icon:hover{
-    filter: unset;
+/* Small Screens Adjustments */
+@media screen and (max-width:1024px) { 
+    .about-image-container,
+    .about-info {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+
+	.personalinfo-tab {
+        min-width: 90px;
+        padding: 10px 10px;
+        margin: 0px 10px;
+    }
+
+    .skills div {
+        padding-top: 30px;
+        padding-left: 0;
+    }
+
+    .skills p, .skills div {
+        width: 100%;
+    }
+
+    .contact div {
+        width: 100%;
+        float: none;
+    }
+    .contact div + div {
+        padding-left: 0;
+    }
 }

@@ -1,32 +1,143 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/styles.css" />
         <title>
-            Teste
+            Danilo Santucci - Resumé
         </title>
     </head>
     <body>
         <header role="header" class="header">
             <img class="logo" src="./images/fiap-logo.jpg" alt="Logo da Fiap">
             <nav role="menu" class="nav">
-                <a role="menuitem" href="#">Home</a>
-                <a role="menuitem" href="#">Portfolio</a>
-                <a role="menuitem" href="#">About</a>
-                <a role="menuitem" href="#">Contact</a>
+                <a role="menuitem" href="#personal">Resume</a>
+                <a role="menuitem" href="#skills">Skills</a>
+                <a role="menuitem" href="#contact">Contact</a>
             </nav>
         </header>    
         <main role="main" class="main">
-            <div style="height: 400px"></div>
-            MAIN
+            <section class="about clearfix">
+                <div class="about-image-container">
+                    <img class="about-image" width="200px" height="200px" src="images/profile.jpg" alt="Imagem de Danilo" title="Danilo" />
+                </div>
+                <div class="about-info">
+                    <h1>Danilo Santucci Nascimento</h1>
+                    <h2>Front-End & Mobile Developer</h2>
+                    <p>Over 10 years experience working with Front-End Development plus 2 years experience working with Mobile Development (Native Android mostly).</p>
+                </div>
+            </section>
+            <section id="personal" class="personalinfo">
+                <button class="personalinfo-tab active" data-block="resume">Resume</button>
+                <button class="personalinfo-tab" data-block="experience">Experience</button>
+                <button class="personalinfo-tab" data-block="education">Education</button>
+                <div class="personalinfo-block" data-block="resume">
+                    <p>
+                        - Experienced Front-End Development (HTML5, CSS3, JavaScript, Responsive + Mobile web) - 10+ years. <br/>
+                        - UX / UI Design (Mainly focus on Low + High Fidelity Prototyping and User Testing) - 4 years <br/>
+                        - Mobile Development (Native Development Android Java/Kotlin) - 1.5 years <br/>
+                        - A single experience working with RPA (Automation Anywhere) - 3 months <br/>
+                    </p>
+                    <p>    
+                        Currently focused on native mobile development (Android & iOs).
+                    </p>
+                </div>
+                <div class="personalinfo-block hide" data-block="experience">
+                        <ul>
+                            <li>
+                                <strong>Capgemini</strong>
+                                <i>Mobile Developer</i>
+                                2017 - Current
+                            </li>
+                            <li>
+                                <strong>Capgemini</strong>
+                                <i>UX/UI Analyst</i>
+                                2014 - 2017
+                            </li>
+                            <li>
+                                <strong>Vagalume Midia</strong>
+                                <i>Web Developer</i>
+                                2011 - 2014
+                            </li>
+                            <li>
+                                <strong>Speedy Officer do Brasil</strong>
+                                <i>Programmer</i>
+                                2008 - 2011
+                            </li>
+                        </ul>
+                </div>
+                <div class="personalinfo-block hide" data-block="education">
+                    <ul>
+                        <li>
+                            <strong>FIAP</strong>
+                            <i>MBA Mobile Development</i>
+                            2019 - 2020
+                        </li>
+                        <li>
+                            <strong>Unip</strong>
+                            <i>Graphic Design</i>
+                            2013 - 2014
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="skills" class="skills clearfix">
+                <h2>Skills</h2>
+                <p>
+                    Experienced in HTML, CSS, JavaScript, jQuery. <br/>
+                    Experienced in Low/High Fidelity prototyping with Axure RP. <br/>
+                    Progressing in Low/High Fidelity prototyping with Photoshop. <br/>
+                    Progressing in Native Android Development. <br/>
+                    Studying iOs and Hybrid Mobile Development.
+                </p>
+
+                <div>
+                    <label>
+                        Front-End Development
+                        <meter low="30" high="70" max="100" value="80"></meter>
+                    </label>
+                    <label>
+                        Mobile Development
+                        <meter low="30" high="70" max="100" value="70"></meter>
+                    </label>
+                    <label>
+                        Low / High Fidelity Prototyping
+                        <meter low="30" high="70" max="100" value="65"></meter>
+                    </label>
+                </div>    
+
+            </section>
+            <section id="contact" class="contact clearfix">
+                <h2>Contact</h2>
+                <div>
+                    <label for="form-name">Name:</label>
+                    <input type="text" class="form-name" name="form-name"/>
+                    <label for="form-name">Subject:</label>
+                    <input type="text" class="form-subject" name="form-subject"/>
+                    <label for="form-name">E-mail:</label>
+                    <input type="text" class="form-email" name="form-email"/>
+                </div>    
+                <div>
+                    <label for="form-message">Your Message:</label>
+                    <textarea class="form-message" name="message" cols="30" rows="10"></textarea>
+                    <button class="form-send">Send</button>
+                </div>
+            </section>
         </main>
         <footer role="footer" class="footer">
-            <a role="link" class="footer-icon facebook" href="#">facebook</a>
-            <a role="link" class="footer-icon twitter" href="#">twitter</a>
-            <a role="link" class="footer-icon linkedin" href="#">linkedin</a>
-            
-            <p>Copyright © 2019 Danilo Santucci • São Paulo based Front-End & Mobile Developer</p>
+            <a role="link" class="footer-icon footer-icon--github" target="_blank" href="https://github.com/dansantucci">
+                Github
+            </a>
+            <a role="link" class="footer-icon footer-icon--linkedin" target="_blank" href="https://www.linkedin.com/in/danilosantucci/">
+                LinkedIn
+            </a>
+            <p>
+                Copyright © 2019 Danilo Santucci • São Paulo based Front-End & Mobile Developer
+            </p>
         </footer>
+
     </body>
+    <script src="./js/load.js"></script>
 </html>
